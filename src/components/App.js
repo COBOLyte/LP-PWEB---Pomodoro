@@ -26,7 +26,7 @@ class App extends React.Component {
     this.onPlayStopTimer = this.onPlayStopTimer.bind(this);
     this.onResetTimer = this.onResetTimer.bind(this);
 
-    setInterval(this.updateBgColor, 999);
+    setInterval(this.updateBgColor, 1000);
   }
 
   updateBgColor() {

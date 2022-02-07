@@ -19,7 +19,11 @@ function SessionLength(props) {
                 disabled={(props.isPlayed) ? "disabled" : ""}
                 onClick={decreaseSession}
                 >-</button>
-                <p className='interval-length'>{props.sessionLength}</p>
+                                <p className='interval-length'>{
+                (props.sessionLength < 10)
+                ? "0" + props.sessionLength
+                : props.sessionLength
+                }</p>
                 <button
                 disabled={(props.isPlayed) ? "disabled" : ""}
                 onClick={increaseSession}

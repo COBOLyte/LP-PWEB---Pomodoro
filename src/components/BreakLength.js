@@ -19,7 +19,11 @@ function BreakLength(props) {
                 disabled={(props.isPlayed) ? "disabled" : ""}
                 onClick={decreaseBreak}
                 >-</button>
-                <p className='interval-length'>{props.breakLength}</p>
+                <p className='interval-length'>{
+                (props.breakLength < 10)
+                ? "0" + props.breakLength
+                : props.breakLength
+                }</p>
                 <button
                 disabled={(props.isPlayed) ? "disabled" : ""}
                 onClick={increaseBreak}
